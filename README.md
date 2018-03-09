@@ -10,3 +10,6 @@ $ go run main.go
 ```
 
 And then, open localhost:8000 and input tweet id into form. You'll get the id's images. You can also download them if you click them.
+
+# LICENSE
+MIT
