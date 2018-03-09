@@ -1,0 +1,23 @@
+<input on:change="update(event.target.value)" type="number">
+<div id="gallery">
+{{#each images as image}}
+    <a href={{image}} download={{image}}><img src={{image}}></a>
+{{/each}}
+</div>
+
+<script>
+  export default {
+    data () {
+      return {
+        images: []
+      }
+    },
+    methods: {
+      update(tweet) {
+        return fetch('/twitter/' + tweet).then(r => { return r.json() }).then(imgs => {
+          this.set({images: imgs})
+        })
+      }
+    }
+  }
+</script>
