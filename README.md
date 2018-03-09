@@ -1,4 +1,12 @@
 # Tweet Image Viewer
+
+## How to setup
+
+```shell
+npm i -g svelte-cli # if you don't install svelte-cli
+svelte compile --format iife view/Time.html > ./assets/index.js
+```
+
 ## How to use
 
 ```shell
